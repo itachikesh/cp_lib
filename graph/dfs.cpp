@@ -13,8 +13,10 @@ void dfs(long x, long n, vector<long> g[])
         a = s.top();
         vis[a] = 1;
         b = g[a].size();
-        for (i = 0; i < b; i++)
-            if (!vis[g[a][i]])
+        for (i = 0; i < b; i++) {
+            if (!vis[g[a][i]]) {
                 s.push_back(g[a][i]);
+            }
+        }
     }
 }
